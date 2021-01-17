@@ -25,6 +25,8 @@ if ($login_status == "true") {
 <html lang="en">
 
 <head>
+    
+    <link rel="icon" type="image/png" href="uploads/theme/favicon.png" />
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -50,11 +52,11 @@ if ($login_status == "true") {
     <nav class="navbar navbar-expand-lg nav-colors">
 
         <a class="navbar-brand" href="index.php">
-            <img src="uploads/theme/logo.png" width="" height="30" class="d-inline-block align-top" alt="">
+            <img src="uploads/theme/logo-light.png" width="" height="30" class="d-inline-block align-top" alt="">
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            
+
             <div class="menubar" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
