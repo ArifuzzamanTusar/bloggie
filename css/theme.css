@@ -1,0 +1,73 @@
+/* theme color  */
+
+:root {
+  --primary-dark: #2c061f;
+  --text-grey: #374045;
+  --action-yellow: #d89216;
+  --light-yellow: #e1d89f;
+}
+a {
+  text-decoration: none;
+  color: var(--action-yellow);
+}
+
+/* header and navs  */
+.nav-colors {
+  background: var(--primary-dark);
+}
+
+.nav-link{
+    color: var(--light-yellow);
+}
+
+/* |||||  TOGGLE MENU BAR |||| */
+.menubar {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 3px;
+  background-color: var(--action-yellow);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/* |||||||||| */
+
+.become_an_author_btn {
+  font-size: 1em;
+  color: white;
+  /* text-transform: uppercase; */
+  border-radius: 5px;
+  padding: 5px 20px;
+  cursor: pointer;
+  background: var(--action-yellow);
+}
+/* .become_an_author_btn a{
+    text-decoration: none;
+
+} */
+.become_an_author_btn:hover {
+  background: var(--light-yellow);
+}
+
+.hide {
+  display: none;
+}
