@@ -57,6 +57,10 @@ if ($login_status == "true") {
             <img src="uploads/theme/logo-light.png" width="" height="30" class="d-inline-block align-top" alt="">
 
         </a>
+
+        <div class="mobile_search">
+            <a data-toggle="modal" type="button" href="#exampleModal"><i class="fas fa-search"></i></a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
             <div class="menubar" onclick="myFunction(this)">
@@ -68,6 +72,7 @@ if ($login_status == "true") {
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ">
+
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
@@ -98,6 +103,9 @@ if ($login_status == "true") {
             </ul>
 
             <div class="">
+
+                <!-- <a class="desktop_search" data-toggle="modal" type="button" href="#exampleModal"><i class="fas fa-search"></i></a> -->
+
                 <a class="<?php echo $false_class ?> become_an_author_btn" href=""> Become an Author</a>
                 <a class="<?php echo $true_class ?>" href="profile.php">
                     <img height="30px" src="uploads/authors/<?php echo $author_image ?>" alt="">
@@ -105,6 +113,36 @@ if ($login_status == "true") {
             </div>
         </div>
     </nav>
+
+
+    <!-- SEARCH MODAL FOR MOBILE & TAB -->
+    <div class="modal fade search_modal_overlay" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content search_modal">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Search</h5> -->
+                    <form action="search.php" method="GET">
+                        <div class="form-group has-search">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <input style="display: none;" name="search" type="submit" value="">
+                    </form>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    ...
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
 
 
 

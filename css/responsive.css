@@ -13,6 +13,7 @@
           font-size: 12px;
       }
 
+     
 }
 @media only screen and ( min-width:768px) {
     /* Medium devices (tablets) */
@@ -24,6 +25,10 @@
         padding-left: 400px;
 
     }
+    .mobile_search{
+        display: none;
+    }
+
     
 }
 @media only screen and (min-width: 1200px) {
