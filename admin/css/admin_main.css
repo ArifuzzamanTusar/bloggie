@@ -1,0 +1,109 @@
+/* colors */
+:root {
+  --primary-dark: #2c061f;
+  --text-grey: #374045;
+  --action-yellow: #d89216;
+  --light-yellow: #e1d89f;
+}
+
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+/* ============================================================ */
+.list_bg_colors{
+    background: var(--primary-dark);
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.211) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.211) !important;
+    
+}
+
+
+
+
+/* ============================================================== */
+/* Toggler */
+.side_toggle_bar {
+  cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.side_toggle_bar:hover .bar1 {
+  width: 25px;
+}
+
+.side_toggle_bar:hover .bar2 {
+  width: 25px;
+  transition-delay: 0.2s;
+}
+.side_toggle_bar:hover .bar3 {
+  width: 25px;
+  transition-delay: 0.3s;
+}
+/* =============================================================== */
+
+
+
+
+/* body  */
+/* =============================================== */
+.page_tittle{
+    transition: 1s;
+    transition-delay: .2s;
+    border-left: 3px solid  var(--primary-dark); ;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.page_tittle:hover{
+    letter-spacing: 5px;
+    transition: .5s;
+}

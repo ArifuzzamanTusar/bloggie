@@ -1,6 +1,6 @@
 <?php
 $page_id=101;
-$page_tittle ="Dashboard";
+$page_tittle ="Pending author";
 include 'admin-header.php';
 ?>
 

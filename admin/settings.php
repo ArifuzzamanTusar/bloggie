@@ -1,6 +1,6 @@
 <?php
 $page_id=101;
-$page_tittle ="Dashboard";
+$page_tittle ="Settings";
 include 'admin-header.php';
 ?>
 
