@@ -138,6 +138,55 @@ a:hover {
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.238);
 }
 
+/* TOAST ======================================= */
+.toast_mgs{
+  position: absolute;
+  top: 10%;
+  right: 30px;
+  height: 50px;
+  width: 250px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border-radius: 10px; */
+
+ 
+}
+.done{
+  box-shadow: 0px 3px 10px rgba(0, 184, 0, 0.591);
+}
+.failed{
+  box-shadow: 0px 3px 10px rgba(184, 15, 0, 0.591);
+}
+
+/* ================================= */
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* Dashboard======================================================== */
+.dash_body{
+  background-image: url('../uploads/post_images/mountain.jpg');
+}
+.dashboard-mmenu-bg{
+ padding-top: 10px;
+ padding-bottom: 10px;
+  
+  background: var(--text-grey);
+}
+
+.dash_image{
+  border-radius: 100px;
+  object-fit: cover;
+  object-position: 100% 0%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.449);
+
+}
 
 /* ============= */
 .post_image {

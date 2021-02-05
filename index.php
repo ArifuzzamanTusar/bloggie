@@ -1,3 +1,8 @@
+<?php
+//PAGE SETTINGS
+$page_id = 1002;
+$page_tittle = "BLOGGIE HOME";
+?>
 <!-- including header files  -->
 <?php include 'header.php' ?>
 
@@ -65,7 +70,7 @@
                             <div class="col-xl-6">
                                 <div class="content_widget widget">
                                     <div class="content">
-                                        
+
                                         <a href="#">
                                             <div class="row-post-author"><img src="uploads/authors/avater.png" alt=""> Author Name </div>
                                         </a>

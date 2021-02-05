@@ -1,37 +1,43 @@
-@media only screen and ( max-width:576px) {
-    /* Small devices (landscape phones) */
-    .content_widget {
-        
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-top: -100px;
-      }
-      .blog-tittle{
-        font-size: 18px;
-      }
-      .post_exc{
-          font-size: 12px;
-      }
-
-     
+@media only screen and (max-width: 576px) {
+  /* Small devices (landscape phones) */
+  .content_widget {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -100px;
+  }
+  .blog-tittle {
+    font-size: 18px;
+  }
+  .post_exc {
+    font-size: 12px;
+  }
 }
-@media only screen and ( min-width:768px) {
-    /* Medium devices (tablets) */
-       
+@media only screen and (min-width: 768px) {
+  /* Medium devices (tablets) */
 }
-@media only screen and ( min-width: 992px) {
-    /* Large devices (desktops) */
-    .navbar-nav{
-        padding-left: 400px;
+@media only screen and (min-width: 992px) {
+  /* Large devices (desktops) */
+  .navbar-nav {
+    padding-left: 400px;
+  }
+  .mobile_search {
+    display: none;
+  }
 
-    }
-    .mobile_search{
-        display: none;
-    }
-
-    
+  .dashboard-card {
+    height: 50vh;
+  }
+  .das_pans{
+      height: 50vh;
+  }
+  .dash_body {
+    height: 95vh;
+  }
+  .dashboard-mmenu-bg {
+    padding-top: 50px;
+    height: 100vh;
+  }
 }
 @media only screen and (min-width: 1200px) {
-    /* Extra large devices (large desktops) */
-
+  /* Extra large devices (large desktops) */
 }

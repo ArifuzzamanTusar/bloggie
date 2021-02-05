@@ -27,7 +27,7 @@ if ($login_status == "true") {
 <head>
 
     <link rel="icon" type="image/png" href="uploads/theme/favicon.png" />
-    <title>Title</title>
+    <title><?php echo $page_tittle?></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -74,10 +74,10 @@ if ($login_status == "true") {
             <ul class="navbar-nav mr-auto ">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="about.php">About</a>
                 </li>
                 <!-- category  -->
                 <li class="nav-item dropdown">
@@ -98,7 +98,7 @@ if ($login_status == "true") {
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="contact.php">Contact</a>
                 </li>
             </ul>
 
@@ -106,7 +106,7 @@ if ($login_status == "true") {
 
                 <!-- <a class="desktop_search" data-toggle="modal" type="button" href="#exampleModal"><i class="fas fa-search"></i></a> -->
 
-                <a class="<?php echo $false_class ?> become_an_author_btn" href=""> Become an Author</a>
+                <a class="<?php echo $false_class ?> become_an_author_btn" href="register.php"> Become an Author</a>
                 <a class="<?php echo $true_class ?>" href="profile.php">
                     <img height="30px" src="uploads/authors/<?php echo $author_image ?>" alt="">
                 </a>
