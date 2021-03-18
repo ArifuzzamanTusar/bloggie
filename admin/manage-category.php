@@ -19,12 +19,12 @@ include 'admin-header.php';
     <div class="row">
         <div class="col-lg-4">
             <div class="pb-5">
-                <form action="prc_addcat.php" method="get">
+                <form action="process-addcat.php" method="post">
                     <label for="">Category Name</label>
-                    <input id="tittle" name="cat-name" type="text" class="form-control" required >
+                    <input id="tittle" name="cat-name" type="text" class="form-control" required>
                     <label for="">Category Slug</label>
-                    <input id="slug" name="slug" type="text" class="form-control"  readonly>
-                    <button type="submit" class="btn btn-primary mt-3">Add to Category</button>
+                    <input id="slug" name="cat_slug" type="text" class="form-control" readonly>
+                    <button name="add_cat" type="submit" class="btn btn-primary mt-3">Add to Category</button>
                 </form>
             </div>
 
@@ -42,39 +42,67 @@ include 'admin-header.php';
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        for ($i = 0; $i < 50; $i++) {
-                        ?>
-                            <tr>
-                                <td><?php echo $i ?></td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td><a name="" id="" class="btn btn-primary" data-toggle="modal" href="#auid<?php echo $i ?>" role="button"><i class="fas fa-wrench"></i></a></td>
-                            </tr>
 
-                            <!-- =========  MODAL  ================ -->
-                            <div class="modal fade" id="auid<?php echo $i ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            ...
-                                            <?php echo $i ?>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+
+                        <?php
+                        $topic_query = " SELECT * FROM `categories`  ORDER BY id DESC";
+                        $result = mysqli_query($con, $topic_query);
+                        if (mysqli_num_rows($result) > 0) {
+
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $topic_id = $row["id"];
+                                $topic_name = $row["name"];
+                                $topic_slug = $row["slug"];
+                        ?>
+
+
+
+                                <!-- ============= -->
+
+                                <tr>
+                                    <td><?php echo $topic_id ?></td>
+                                    <td><?php echo $topic_name ?></td>
+                                    <td><?php echo $topic_slug ?></td>
+                                    <td><a name="" id="" class="btn btn-primary" data-toggle="modal" href="#auid<?php echo $topic_id ?>" role="button"><i class="fas fa-wrench"></i></a></td>
+                                </tr>
+
+                                <!-- =========  MODAL  ================ -->
+                                <div class="modal fade" id="auid<?php echo $topic_id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <form action="process-updatecat.php" method="post">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle"><?php echo $topic_name ?></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+
+
+                                                    <label for="">Category Name</label>
+                                                    <input id="tittle" name="cat-name" type="text" class="form-control" required value="<?php echo $topic_name?>">
+                                                    <label for="">Category Slug</label>
+                                                    <input id="slug" name="cat_slug" type="text" class="form-control" readonly value="<?php echo $topic_slug?>">
+                                                    
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <button  name="update_cat" type="submit" class="btn btn-primary">Update</button>
+                                                    <a href="process-delcat.php?id=<?php echo $topic_id ?>" type="button" class="btn btn-danger">Delete</a>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- ======================== MODAL ===================== -->
+                                <!-- ======================== MODAL ===================== -->
+
+
+
                         <?php
+                            }
                         }
                         ?>
                     </tbody>

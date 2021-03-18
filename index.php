@@ -116,39 +116,46 @@ $page_tittle = "BLOGGIE HOME";
             <div class="widget mt-3 p-2"> Recent Blogs</div>
 
             <?php
-            for ($i = 0; $i < 6; $i++) {
+            $topic_query = " SELECT * FROM `posts`  ORDER BY id DESC";
+            $result = mysqli_query($con, $topic_query);
+            if (mysqli_num_rows($result) > 0) {
 
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $topic_id = $row["id"];
+                    $topic_tittle = $row["tittle"];
+                    $author_name = $row["author_user"];
+                    $topic_date = $row["date"];
+                    $post_image =$row["image"]
             ?>
 
-                <div class="mt-2 p-2 widget">
-                    <div class="row">
-                        <div class="col-4">
-                            <img height="100%" width="100%" class="image_fit image_scroll" src="uploads/post_images/food.jpg" alt="">
-                        </div>
-                        <div class="col-8">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2"><a class="sidebar__heading" href="">Lorem eligendi consectetur ullam perspiciatis officia quos.</a> </td>
+                    <div class="mt-2 p-2 widget">
+                        <div class="row">
+                            <div class="col-4">
+                                <img height="120px" width="100%" class="image_fit image_scroll" src="uploads/post__image/<?php echo $post_image?>" alt="">
+                            </div>
+                            <div class="col-8">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2"><a class="sidebar__heading" href=""><?php echo $topic_tittle?></a> </td>
 
-                                    </tr>
+                                        </tr>
 
-                                    <tr class="sidebar_meta">
-                                        <td style="width: 50%;"><i class="fas fa-user"></i> John Doee &nbsp;</td>
-                                        <td style="width: 50%;"> <i class="fa fa-calendar"></i> 29th May</td>
-                                    </tr>
+                                        <tr class="sidebar_meta">
+                                            <td style="width: 50%;"><i class="fas fa-user"></i> <?php echo $author_name?> &nbsp;</td>
+                                            <td style="width: 50%;"> <i class="fa fa-calendar"></i> <?php echo $topic_date?></td>
+                                        </tr>
 
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
 
             <?php
+                }
             }
-
-
             ?>
 
             <!-- Top Author  -->

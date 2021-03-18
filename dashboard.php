@@ -25,8 +25,8 @@ include 'dashboard-head.php';
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
                     <!-- <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-addpost" role="tab" aria-controls="v-pills-manage" aria-selected="false">Add Post</a> -->
-                    
-                    <a class="nav-link"  href="addpost.php">Add Post</a>
+
+                    <a class="nav-link" href="addpost.php">Add Post</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-manage" aria-selected="false">Manage Posts</a>
                     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
                     <a class="nav-link" href="#exampleModalCenter" data-toggle="modal">Logout </a>
@@ -91,7 +91,7 @@ include 'dashboard-head.php';
                     <div class="tab-pane fade" id="v-pills-addpost" role="tabpanel" aria-labelledby="v-pills-manage-tab">
 
                         <div class="pt-3 pb-3 container-fluid das_pans " style="overflow-y: scroll;">
-                           kjhaskhdkashk
+                            kjhaskhdkashk
 
 
                         </div>
@@ -105,49 +105,53 @@ include 'dashboard-head.php';
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
+                                        <th>Post Title</th>
                                         <th>TIME</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
-                                    for ($i = 0; $i < 50; $i++) {
-                                    ?>
-                                        <tr>
-                                            <td><?php echo $i ?></td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td><a name="" id="" class="btn btn-primary" data-toggle="modal" href="#auid<?php echo $i ?>" role="button"><i class="fas fa-wrench"></i></a></td>
-                                        </tr>
+                                    $topic_query = " SELECT * FROM `posts`  ORDER BY id DESC";
+                                    $result = mysqli_query($con, $topic_query);
+                                    if (mysqli_num_rows($result) > 0) {
 
-                                        <!-- =========  MODAL  ================ -->
-                                        <div class="modal fade" id="auid<?php echo $i ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        ...
-                                                        <?php echo $i ?>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            $topic_id = $row["id"];
+                                            $topic_tittle = $row["tittle"];
+                                            $topic_date= $row["date"];
+                                    ?>
+                                            <tr>
+                                                <td><?php echo $topic_id ?></td>
+                                                <td> <?php echo $topic_tittle?></td>
+                                                <td> <?php echo $topic_date?></td>
+                                                <td><a name="" id="" class="btn btn-primary" data-toggle="modal" href="#auid<?php echo $i ?>" role="button"><i class="fas fa-wrench"></i></a></td>
+                                            </tr>
+
+                                            <!-- =========  MODAL  ================ -->
+                                            <div class="modal fade" id="auid<?php echo $i ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                            <?php echo $i ?>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- ======================== MODAL ===================== -->
+                                            <!-- ======================== MODAL ===================== -->
                                     <?php
+                                        }
                                     }
                                     ?>
                                 </tbody>
