@@ -1,4 +1,9 @@
 <!-- includes -->
+<?php 
+include 'connection.php';
+
+?>
+
 
 <!-- functions starts  -->
 

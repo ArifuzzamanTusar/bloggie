@@ -171,6 +171,7 @@ a:hover {
 
 /* Dashboard======================================================== */
 .dash_body{
+  /* height: 100vh !important; */
   background-image: url('../uploads/post_images/mountain.jpg');
 }
 .dashboard-mmenu-bg{

@@ -11,6 +11,13 @@
   .post_exc {
     font-size: 12px;
   }
+
+  .tab-pane {
+    min-height: 50vh;
+  }
+  .dash_body {
+    min-height: 100vh;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* Medium devices (tablets) */
@@ -27,11 +34,11 @@
   .dashboard-card {
     height: 50vh;
   }
-  .das_pans{
-      height: 50vh;
+  .das_pans {
+    height: 50vh;
   }
   .dash_body {
-    height: 95vh;
+    height: 100vh;
   }
   .dashboard-mmenu-bg {
     padding-top: 50px;

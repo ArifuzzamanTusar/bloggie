@@ -7,7 +7,7 @@ $db_name = "bloggie";
 $con = mysqli_connect($servername, $db_username, $db_pass, $db_name);
 // Check Connction
 if (!$con) {
-    header("location:404.php");
+    // header("location:404.php");
 }
 
 

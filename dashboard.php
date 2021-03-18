@@ -3,7 +3,14 @@
 $page_id = 1002;
 $page_tittle = "Dashboard";
 ?>
-<?php include 'header.php' ?>
+<?php
+
+include 'dashboard-head.php';
+
+
+
+?>
+
 
 
 <div class="container-fluid center dash_body p-2">
@@ -17,6 +24,9 @@ $page_tittle = "Dashboard";
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
                     <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                    <!-- <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-addpost" role="tab" aria-controls="v-pills-manage" aria-selected="false">Add Post</a> -->
+                    
+                    <a class="nav-link"  href="addpost.php">Add Post</a>
                     <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-manage" aria-selected="false">Manage Posts</a>
                     <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
                     <a class="nav-link" href="#exampleModalCenter" data-toggle="modal">Logout </a>
@@ -35,9 +45,9 @@ $page_tittle = "Dashboard";
                                 </div>
                                 <br>
                                 <div class="welcome p-2">
-                                    Welcome, Johnathon Doe
+                                    Welcome, <?php echo $fname . " " . $lname ?>
                                 </div>
-                                <a href="create-post.php" type="button" name="" id="" class="btn btn-primary "> Create Your New Post</a>
+                                <a href="addpost.php" type="button" name="" id="" class="btn btn-primary "> Create Your New Post</a>
                             </div>
                         </div>
 
@@ -75,6 +85,15 @@ $page_tittle = "Dashboard";
 
 
                             </div>
+                        </div>
+                    </div>
+                    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\Add Post\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+                    <div class="tab-pane fade" id="v-pills-addpost" role="tabpanel" aria-labelledby="v-pills-manage-tab">
+
+                        <div class="pt-3 pb-3 container-fluid das_pans " style="overflow-y: scroll;">
+                           kjhaskhdkashk
+
+
                         </div>
                     </div>
 
@@ -187,7 +206,7 @@ $page_tittle = "Dashboard";
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger">Log Out</button>
+                <a href="logout.php?logout" type="button" class="btn btn-danger text-white">Log Out</a>
             </div>
         </div>
     </div>
