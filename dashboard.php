@@ -41,7 +41,7 @@ include 'dashboard-head.php';
                         <div class="container-fluid">
                             <div class="text-center">
                                 <div class="pt-5">
-                                    <img height="100px" width="100px" class="dash_image" src="uploads/authors/avater.png" alt="">
+                                    <img height="100px" width="100px" class="dash_image" src="uploads/author__image/<?php echo $profile_picture; ?>" alt="">
                                 </div>
                                 <br>
                                 <div class="welcome p-2">
