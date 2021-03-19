@@ -163,7 +163,7 @@ include 'dashboard-head.php';
 
                                 <label for="">Upload post Feature Images </label> <br>
 
-                                <input type="file" name="post-img">
+                                <input type="file" name="post-img" required>
                                 <pre> Choose jpg,jpeg,png 3:2 Ratio </pre>
 
                                 <div class="form-group">

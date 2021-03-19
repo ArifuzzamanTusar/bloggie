@@ -1,5 +1,6 @@
 <!-- includes -->
 <?php 
+$site_url="bloggie.com";
 include 'connection.php';
 
 ?>
