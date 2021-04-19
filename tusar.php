@@ -1,7 +1,7 @@
 <?php 
 
 
-echo "Git Control testing";
+echo "Git Control testing new";
 
 
 ?>

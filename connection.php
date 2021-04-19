@@ -13,4 +13,4 @@ if (!$con) {
 //db: arifuzza_bloggie
 //user: arifuzza_bloggie
 //pass: w~ee&=]uWD,g
-
+//for hosted
