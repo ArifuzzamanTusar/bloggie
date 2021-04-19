@@ -10,4 +10,7 @@ if (!$con) {
     // header("location:404.php");
 }
 
+//db: arifuzza_bloggie
+//user: arifuzza_bloggie
+//pass: w~ee&=]uWD,g
 
