@@ -61,7 +61,7 @@ a:hover {
 .become_an_author_btn {
   font-size: 1em;
   color: white;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   border-radius: 5px;
   padding: 5px 20px;
   cursor: pointer;

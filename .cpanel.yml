@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/arifuzza/project.arifuzzamantusar.com/bloggie 
+    - /bin/cp * $DEPLOYPATH
+ 
