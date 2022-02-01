@@ -42,15 +42,15 @@ $page_tittle = "BLOGGIE HOME";
                                 <div class="widget">
                                     <div class="overlay p-3 ">
                                         <div class="front_content">
-                                            <span class="cat_name"><?php echo $topic_name?></span><span class="cat_popular">Popular</span>
-                                            <h4><?php echo $post_tittle?></h4>
-                                            <span class="top_meta"><img src="uploads/authors/avater.png" alt=""> <?php echo $author_name?> &nbsp;&nbsp;</span> <span class="top_meta"> <i class="fa fa-calendar"></i> <?php echo date_format($post_date, "d F");   ?></span>
-                                            <p><?php echo strip_tags(substr($post_dsc, 0, 200)) ; ?> </p>
+                                            <span class="cat_name"><?php echo $topic_name ?></span><span class="cat_popular">Popular</span>
+                                            <h4><?php echo $post_tittle ?></h4>
+                                            <span class="top_meta"><img src="uploads/authors/avater.png" alt=""> <?php echo $author_name ?> &nbsp;&nbsp;</span> <span class="top_meta"> <i class="fa fa-calendar"></i> <?php echo date_format($post_date, "d F");   ?></span>
+                                            <p><?php echo strip_tags(substr($post_dsc, 0, 200)); ?> </p>
                                             <a class="read_more" href="post.php?id=<?php echo $post_id ?>">Read More <i class="fas fa-arrow-right"></i></a>
 
                                         </div>
                                     </div>
-                                    <img class="post_image" src="uploads/post__image/<?php echo $post_image?>" alt="">
+                                    <img class="post_image" src="uploads/post__image/<?php echo $post_image ?>" alt="">
 
                                 </div>
 
@@ -113,7 +113,7 @@ $page_tittle = "BLOGGIE HOME";
                                             </a>
                                             <span class="sidebar_meta"><i class="fa fa-calendar"></i> <?php echo date_format($post_date, "d F");   ?> &nbsp; <i class="fa fa-comments"></i> <?php echo $commments ?> </span>
 
-                                            <p class="post_exc"><?php echo strip_tags(substr($post_dsc, 0, 200)) ;?> </p>
+                                            <p class="post_exc"><?php echo strip_tags(substr($post_dsc, 0, 200)); ?> </p>
 
                                             <a class="read_more" href="post.php?id=<?php echo $post_id ?>">Read More <i class="fas fa-arrow-right"></i></a>
 
